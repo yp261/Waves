@@ -113,7 +113,7 @@ static void StopNotifications()
 {
     //initialise motion manager
     motionManager = [[CMMotionManager alloc] init];
-    motionManager.deviceMotionUpdateInterval = 0.5;
+    motionManager.deviceMotionUpdateInterval = 0.1;
     //add observer for preferences changed:
     CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)updateFluidView, CFSTR("com.muirey03.waves-prefsChanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
 }
